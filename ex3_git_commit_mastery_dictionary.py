@@ -18,47 +18,59 @@ import random
 
 
 class Banking:
-    def __init__(self, account_id, balance):
+    all_accounts = {}
+
+    def __init__(self, account_id, balance=0):
+        # accounts = {}
         self.account_id = account_id
         self.balance = balance
 
     def account_creation(self):
         """creates a new account with a unique account ID and initial balance."""
         self.account_id = random.randint(10000000, 99999999)
+        # self.accounts[account_id] = 0
         self.balance = 0
+        Banking.all_accounts[self.account_id] = self.balance
         return f"Account ID: {self.account_id}\nBalance: {self.balance}"
 
-    def balance_inquiry(self):
+    def balance_inquiry(self, account_id):
         """checks the current balance of a given account ID."""
-        return f"Account ID: {self.account_id}\nBalance: {self.balance}"
+        # balance = self.accounts.get(account_id, None)
+        if account_id in Banking.all_accounts:
+            return f"Account ID: {self.account_id}\nBalance: {Banking.all_accounts[account_id]}"
+        else:
+            return "Account not found"
 
-    def deposit(self, amount):
+    def deposit(self, account_id, amount):
         """deposits an amount to a specific account, updating the balance."""
-        self.balance += amount
-        return f"Deposited: {amount}\nNew Balance: {self.balance}"
+        Banking.all_accounts[account_id] += amount
+        return f"Deposited: {amount}\nNew Balance: {Banking.all_accounts[account_id]}"
 
-    def withdrawal(self, amount):
+    def withdrawal(self, account_id, amount):
         """withdraws an amount from a specific account, updating the balance if
             sufficient funds exist."""
-        if amount <= self.balance:
-            self.balance -= amount
-            return f"Withdrawal: {amount}\nNew Balance: {self.balance}"
+        if amount <= Banking.all_accounts[account_id]:
+            Banking.all_accounts[account_id] -= amount
+            return f"Withdrawal: {amount}\nNew Balance: {Banking.all_accounts[account_id]}"
         else:
             return "Insufficient funds"
 
-    def account_summary(self, account_id, balance):
+    def account_summary(self, account_id):
         """prints a summary of an account, including the account ID and current
         balance."""
-        return f"Account ID: {self.account_id}\nCurrent Balance: {self.balance}"
+        if account_id in Banking.all_accounts:
+            return f"Account ID: {self.account_id}\nCurrent Balance: {Banking.all_accounts[account_id]}"
+        else:
+            return "Account not found"
 
 
 if __name__ == "__main__":
-    user1 = Banking(account_id=12345678, balance=10)
-    assert user1.account_id == 12345678
-    assert user1.balance == 10
+    banking_instance = Banking(account_id=None)
+    new_customer = banking_instance.account_creation()
+    print(new_customer)
 
-    print(user1.balance_inquiry())
-    assert user1.deposit(amount=5) == "Deposited: 5\nNew Balance: 15"
-    assert user1.withdrawal(amount=25) == "Insufficient funds"
-    assert user1.withdrawal(amount=5) == "Withdrawal: 5\nNew Balance: 10"
+    balance_inquiry = banking_instance.balance_inquiry(account_id=None)
+    print(new_customer)
 
+    deposit_test = banking.deposit(account_id=None, amount=20)
+    print(deposit_test)
