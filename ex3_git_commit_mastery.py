@@ -27,3 +27,9 @@ class Banking:
         account_id = random.randint(10000000, 99999999)
         balance = 0
         return f"Account ID: {account_id}\nBalance: {balance}"
+
+    def balance_inquiry(self):
+        """checks the current balance of a given account ID."""
+        return self.account_id, self.balance
+
+
