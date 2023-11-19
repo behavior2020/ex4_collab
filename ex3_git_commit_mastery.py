@@ -18,21 +18,24 @@ import random
 
 
 class Banking:
-    def __init__(self, account_id, balance):
-        self.account_id = account_id
-        self.balance = balance
+    def __init__(self):
+        self.accounts = {}
 
     def account_creation(self):
         """creates a new account with a unique account ID and initial balance."""
         account_id = random.randint(10000000, 99999999)
-        balance = 0
-        return f"Account ID: {account_id}\nBalance: {balance}"
+        self.accounts[account_id] = 0
+        return f"Account ID: {account_id}\nBalance: 0"
 
-    def balance_inquiry(self):
+    def balance_inquiry(self, account_id):
         """checks the current balance of a given account ID."""
-        return self.account_id, self.balance
+        balance = self.accounts.get(account_id, None)
+        if balance is not None:
+            return f"Account ID: {account_id}\nBalance: {balance}"
+        else:
+            return "Account not found"
 
-    def deposit(self):
+    def deposit(self, account_id):
         """deposits an amount to a specific account, updating the balance."""
         deposit = input("Choose Deposit Amount: ")
         balance = int(deposit) + self.balance
