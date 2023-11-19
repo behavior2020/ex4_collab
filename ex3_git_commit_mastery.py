@@ -32,4 +32,7 @@ class Banking:
         """checks the current balance of a given account ID."""
         return self.account_id, self.balance
 
-
+    def deposit(self):
+        """deposits an amount to a specific account, updating the balance."""
+        deposit = input("Choose Deposit Amount: ")
+        balance = int(deposit) + self.balance
