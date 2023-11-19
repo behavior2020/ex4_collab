@@ -61,4 +61,3 @@ if __name__ == "__main__":
     assert user1.deposit(amount=5) == "Deposited: 5\nNew Balance: 15"
     assert user1.withdrawal(amount=25) == "Insufficient funds"
     assert user1.withdrawal(amount=5) == "Withdrawal: 5\nNew Balance: 10"
-
