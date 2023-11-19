@@ -36,3 +36,14 @@ class Banking:
         """deposits an amount to a specific account, updating the balance."""
         deposit = input("Choose Deposit Amount: ")
         balance = int(deposit) + self.balance
+        return f"Deposited: {deposit}\nNew Balance: {balance}"
+
+    def withdrawal(self):
+        """withdraws an amount from a specific account, updating the balance if
+            sufficient funds exist."""
+        withdrawal = input("Choose Withdrawal Amount: ")
+        if withdrawal > self.balance:
+            balance = self.balance - withdrawal
+        else:
+            print("Insufficient funds")
+        return f"Withdrawal: {withdrawal}\nNew Balance: {balance}"
