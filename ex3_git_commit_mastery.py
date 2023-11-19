@@ -14,9 +14,16 @@ sufficient funds exist.
     ○ A function to print a summary of an account, including the account ID and current
 balance.
 """
+import random
 
 
-class Banking():
-    def __init__(self, account_id, balance=0):
+class Banking:
+    def __init__(self, account_id, balance):
         self.account_id = account_id
         self.balance = balance
+
+    def account_creation(self):
+        """creates a new account with a unique account ID and initial balance."""
+        account_id = random.randint(10000000, 99999999)
+        balance = 0
+        return f"Account ID: {account_id}\nBalance: {balance}"
