@@ -35,23 +35,31 @@ class Banking:
         else:
             return "Account not found"
 
-    def deposit(self, account_id):
+    def deposit(self, account_id, amount):
         """deposits an amount to a specific account, updating the balance."""
-        deposit = input("Choose Deposit Amount: ")
-        balance = int(deposit) + self.balance
-        return f"Deposited: {deposit}\nNew Balance: {balance}"
+        if account_id in self.accounts:
+            self.accounts[account_id] += amount
+            return f"Deposited: {amount}\nNew Balance: {self.accounts[account_id]}"
+        else:
+            return "Account not found"
 
-    def withdrawal(self):
+    def withdrawal(self, account_id, amount):
         """withdraws an amount from a specific account, updating the balance if
             sufficient funds exist."""
-        withdrawal = input("Choose Withdrawal Amount: ")
-        if withdrawal > self.balance:
-            balance = self.balance - withdrawal
+        if account_id in self.accounts:
+            self.accounts[account_id] -= amount
+            return f"Withdrawal: {amount}\nNew Balance: {self.accounts[account_id]}"
         else:
-            print("Insufficient funds")
-        return f"Withdrawal: {withdrawal}\nNew Balance: {balance}"
+            return "Insufficient funds"
 
-    def account_summary(self):
+    def account_summary(self, account_id):
         """prints a summary of an account, including the account ID and current
         balance."""
-        return self.account_id, self.balance
+        if account_id in self.accounts:
+            return f"Account ID: {account_id}\nCurrent Balance: {self.accounts[account_id]}"
+        else:
+            return "Account not found"
+
+
+bank = Banking()
+print(bank.account_creation())
