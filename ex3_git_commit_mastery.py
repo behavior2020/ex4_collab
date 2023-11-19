@@ -47,3 +47,8 @@ class Banking:
         else:
             print("Insufficient funds")
         return f"Withdrawal: {withdrawal}\nNew Balance: {balance}"
+
+    def account_summary(self):
+        """prints a summary of an account, including the account ID and current
+        balance."""
+        return self.account_id, self.balance
