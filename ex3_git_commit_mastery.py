@@ -46,7 +46,7 @@ class Banking:
         else:
             return "Insufficient funds"
 
-    def account_summary(self, account_id, balance):
+    def account_summary(self):
         """prints a summary of an account, including the account ID and current
         balance."""
         return f"Account ID: {self.account_id}\nCurrent Balance: {self.balance}"
@@ -56,8 +56,11 @@ if __name__ == "__main__":
     user1 = Banking(account_id=12345678, balance=10)
     assert user1.account_id == 12345678
     assert user1.balance == 10
+    print(user1.account_summary())
 
     print(user1.balance_inquiry())
     assert user1.deposit(amount=5) == "Deposited: 5\nNew Balance: 15"
     assert user1.withdrawal(amount=25) == "Insufficient funds"
     assert user1.withdrawal(amount=5) == "Withdrawal: 5\nNew Balance: 10"
+
+    # print(isinstance(user1, Banking))
