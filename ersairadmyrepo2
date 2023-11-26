@@ -1,0 +1,89 @@
+[33mcommit 3d6cb438671404a304d58e707dfeb2b9a4e12e1e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Adrian <airadzy@gmail.com>
+Date:   Sat Nov 25 16:22:54 2023 +0100
+
+    added L before and after word Aegean
+
+[33mcommit 00fbc41b9d60b2f5311886aa4d4a2cdfd2da925f[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sat Nov 25 17:07:35 2023 +0200
+
+    adding hello_world
+
+[33mcommit fd099bf4279cefb426c21f5e240c787c5739cae8[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sat Nov 25 16:55:57 2023 +0200
+
+    added gitting-started
+
+[33mcommit 5a61d3c9774f5d790221b8bfd784f3e275f12009[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Wed Nov 22 10:35:41 2023 +0200
+
+    add ex3_git_commit_mastery_redo.py
+
+[33mcommit 2a41534b8b8375a83b680ac39012af7a77e97209[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 21:27:43 2023 +0200
+
+    closing change
+
+[33mcommit 690e14a3b5cc51b4917b60d9d114123143466794[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 21:20:02 2023 +0200
+
+    polished functions and added tests
+
+[33mcommit 70338e8e1c0b366bca8383431701195b49b09e46[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 16:03:51 2023 +0200
+
+    updated desposit, withdrawl, and summary functions
+
+[33mcommit 8ca632fde3cab94a62823729b4be5bdd111f99f2[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 15:37:31 2023 +0200
+
+    updated account creation & balance inquiry functions
+
+[33mcommit 3aa7e305d14418679a2f2778f898930d69d4463d[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 15:23:49 2023 +0200
+
+    account summary function
+
+[33mcommit d693d61c5a2580e8b88fe4878d11ba9eeda94ead[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 15:22:22 2023 +0200
+
+    withdrawal function
+
+[33mcommit 12e63704eda156a1d4c3a037d7d73ed32d077d0c[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 15:14:31 2023 +0200
+
+    deposit function
+
+[33mcommit 53122da02c974e8237d35a58c7616f5ea9a47d8b[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 15:11:45 2023 +0200
+
+    balance_inquiry function
+
+[33mcommit 27dc12082a55d6b351643309cd950c46e93bbd59[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 15:04:39 2023 +0200
+
+    created account_creation function
+
+[33mcommit 4692427bb028934f9123404ff5b17ffbf2a442ec[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 14:51:42 2023 +0200
+
+    creating bank class
+
+[33mcommit 4535c1ad82b847488d41f224624218c20505775f[m
+Author: nick@behavior2020.com <nick@behavior2020.com>
+Date:   Sun Nov 19 14:33:42 2023 +0200
+
+    Initial commit
